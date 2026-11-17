@@ -1,0 +1,37 @@
+* ==============================================================================
+* GitHub Repository Note: A Git repository (repo) is an online storage space
+* used to organize, version-control, and share project files (like SPICE models)
+* with the engineering community.
+*
+* Author: Hamid Saneie
+* Date: 2026-11-17
+*
+* DISCLAIMER: This is an unofficial, behavioral macro-model based on datasheet
+* parameters. It is provided "as-is" without any warranties for functional or
+* production use. Always verify simulation results with physical prototypes.
+* ==============================================================================
+* LTspice Macro-model for HCNW4503 Optocoupler
+* 5-Pin Configuration: Anode, Cathode, GND, VO, VCC
+* Default CTR = 24% (Typical), hFE = 180 (Typical for Widebody)
+.SUBCKT HCNW4503 A C GND VO VCC
+.param CTR=0.24
+.param hFE=180
+
+* Input LED
+D1 A N1 Dled
+Vmeas N1 C 0V
+
+* Photodiode transfer (Injects current from VCC to Base)
+* It calculates the required base current based on CTR and hFE
+B1 VCC B I=MAX(I(Vmeas),0)*(CTR/hFE)
+
+* Output Transistor (NPN)
+Q1 VO B GND Qout
+
+* Convergence/Leakage resistor (Improves SPICE simulation stability)
+Rbe B GND 1Meg
+
+* Component Models
+.model Dled D(Is=1e-15 N=1.9 Rs=2)
+.model Qout NPN(Is=1e-14 Bf={hFE} Vaf=50)
+.ENDS HCNW4503

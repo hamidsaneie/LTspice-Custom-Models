@@ -1,0 +1,29 @@
+# ==========================================
+# LTspice specific files to ignore
+# ==========================================
+
+# Simulation data and waveform files (can be very large)
+*.raw
+*.op.raw
+*.fft
+*.bct
+
+# Netlists and simulation logs
+*.net
+*.log
+
+# Sweep and temporary files
+*.swp
+*.tmp
+
+# LTspice auto-backups
+*.bak
+*.tbk
+*.~*
+
+# ==========================================
+# General OS hidden files
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini

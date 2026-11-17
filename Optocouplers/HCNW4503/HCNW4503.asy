@@ -1,0 +1,54 @@
+Version 4
+SymbolType CELL
+LINE Normal 128 0 144 0
+LINE Normal 128 0 80 32
+LINE Normal 128 112 80 80
+LINE Normal 128 112 144 112
+LINE Normal 80 96 80 16
+LINE Normal 48 0 16 0
+LINE Normal 32 -32 48 0
+LINE Normal 16 0 32 -32
+LINE Normal 49 -32 16 -32
+LINE Normal 32 56 32 0
+LINE Normal 80 56 32 56
+LINE Normal 32 -80 32 -32
+LINE Normal 144 -80 32 -80
+LINE Normal -48 -32 -16 -32
+LINE Normal -32 0 -48 -32
+LINE Normal -16 -32 -32 0
+LINE Normal -49 0 -16 0
+LINE Normal -32 -64 -80 -64
+LINE Normal -32 -32 -32 -64
+LINE Normal -32 64 -32 0
+LINE Normal -80 64 -32 64
+LINE Normal -5 -16 -5 -24
+LINE Normal -13 -24 -5 -24
+LINE Normal -16 -13 -5 -24
+LINE Normal -3 -7 -3 -15
+LINE Normal -11 -15 -3 -15
+LINE Normal -14 -4 -3 -15
+RECTANGLE Normal 144 128 -80 -112
+TEXT -69 -77 Left 2 A
+TEXT -68 74 Left 2 C
+TEXT 122 112 Right 2 GND
+TEXT 116 0 Right 2 VO
+TEXT 134 -95 Right 2 VCC
+TEXT -70 139 Left 2 HCNW4503
+SYMATTR Value HCNW4503
+SYMATTR ModelFile HCNW4503.sub
+SYMATTR Prefix X
+PIN -80 -64 NONE 0
+PINATTR PinName A
+PINATTR SpiceOrder 1
+PIN -80 64 NONE 0
+PINATTR PinName C
+PINATTR SpiceOrder 2
+PIN 144 112 NONE 0
+PINATTR PinName GND
+PINATTR SpiceOrder 3
+PIN 144 0 NONE 0
+PINATTR PinName VO
+PINATTR SpiceOrder 4
+PIN 144 -80 NONE 0
+PINATTR PinName VCC
+PINATTR SpiceOrder 5
